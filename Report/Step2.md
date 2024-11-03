@@ -8,9 +8,9 @@ following accounts were created
 
 ![alt](../images/accounts.avif)
 
-The process takes a lot of time if done manually. It can be automated by using this [python script](../Scripts/).
-
 ## Automating the process
+
+The process takes a lot of time if done manually. It can be automated by using this [bash script](../Scripts/createAccounts.sh).
 
 This script reads from the csv with this format:
 ```

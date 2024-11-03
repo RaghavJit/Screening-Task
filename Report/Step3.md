@@ -46,7 +46,8 @@ zimbraZimletLoadSynchronously: FALSE
 zimbraZimletUserPropertiesMaxNumEntries: 150
 ```
 
-this can be cleaned up using **awk** (see [licence]())
+## Bash Scipt
+The above output of zmprov can be cleaned up using **awk** (see [licence](https://github.com/onetrueawk/awk/blob/master/LICENSE))
 ```
 zmprov -l gaa | awk '{system("zmprov -l ga "$1" userPassword")}' | awk -F' ' '/name/{email=$3} /userPassword:/{gsub("{SSHA512}","",$2); print email "," $2}' > /tmp/zimbra.csv
 ```

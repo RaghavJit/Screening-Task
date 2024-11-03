@@ -8,7 +8,7 @@ Zimbra requires the following to install properly:
 1. Domain name
 1. MX record 
 
-Since I have these [limitations](../Limitations.md), I decided to install Zimbra on Ubuntu-20.04-LTS (see [licence]()). I then gave it a static IP and hosted a local DNS server (using dnsmasq see [licence]()) 
+Since I have these [limitations](../Limitations.md), I decided to install Zimbra on Ubuntu-20.04-LTS (see [licence](https://ubuntu.com/legal/open-source-licences?release=focal)). I then gave it a static IP and hosted a local DNS server (using dnsmasq see [licence](https://github.com/sous-chefs/dnsmasq/blob/main/LICENSE)) 
 
 ## Creating Virtual Machine
 1. VirtualBox was downloaded and installed using pacman on my Arch-Linux host.
@@ -19,7 +19,7 @@ sudo gpasswd -a $USER vboxusers
 sudo modprobe vboxdrv
 ```
 
-1. Ubuntu live-server 20.04 LTS iso was downloaded from [here]().
+1. Ubuntu live-server 20.04 LTS iso was downloaded from [here](https://mirror.ubuntu.bsr.one/20.04.6/ubuntu-20.04.6-live-server-amd64.iso).
 
 1. Virtual Machine was created with following configurations. 
 
@@ -28,7 +28,7 @@ sudo modprobe vboxdrv
 
 Here the Network adapter 1 is set in Bridged Mode (can also be NAT mode) for internet connection to the VM. Adapter 2 is in Host-Only mode (vboxnet0)
 
-![alt](../images/)
+![alt](../images/vboxnet-settings.avif)
 
 Since there was only one VM on my machine it automatically got the IP 192.168.56.3 (by DHCP). It's not really 'static' since it was assigned via DHCP but everytime my VM got this IP on boot.
 
